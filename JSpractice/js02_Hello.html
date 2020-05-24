@@ -6,7 +6,11 @@
 
 <p id="demo">You can say hello to me here.</p>
 
-<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello! Nice to meet you"'>Hello Frank!</button>
+<script type="text/javascript">
+    var username=window.prompt("How should I call you?");
+</script>
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello "+username+"! Nice to meet you"'>Hello Frank!</button>
 
 </body>
 </html>

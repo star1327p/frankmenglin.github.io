@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Interest Rate and Annuity Calculators</title>
+    <script src="js05_InterestRate.js"></script>
+</head>
+
+<body>
+    <p> Interest Rate Conversion Calculator</p>
+
+    <label>Convert from </label>
+    <select id="inputratetype" name="inputratetype">
+      <option value="interest">nominal interest rate</option>
+      <option value="discount">nominal discount rate</option>
+      <option value="force">force of interest (continuous compound)</option>
+    </select>
+    <label>convertible/compound</label>
+    <input type="text" id="inputcompoundfreq" name="inputcompoundfreq">
+    <label>times per year(leave the box empty if you choose force of interest)</label><br><br>
+    
+    <label for="Rate">Rate=</label>
+    <input type="text" id="Rate" name="Rate">
+    <label for="Rate">%</label>
+    <br><br>
+    
+    <label>to </label>
+    <select id="outputratetype" name="outputratetype">
+      <option value="interest">nominal interest rate</option>
+      <option value="discount">nominal discount rate</option>
+      <option value="force">force of interest (continuous compound)</option>
+    </select>
+    <label>convertible/compound</label>
+    <input type="text" id="outputcompoundfreq" name="outputcompoundfreq">
+    <label>times per year(leave the box empty if you choose force of interest)</label><br><br>
+    
+    <button id="Test" onclick='convertrate_out();'>Convert</button>
+
+    <p id="answer"> </p>
+</body>
+
+</html>

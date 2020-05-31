@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Annuity Calculators</title>
+    <script src="js06_Annuity_Calculator.js"></script>
+</head>
+
+<body>
+    <p> Annuity Calculator</p>
+
+    <label>Interest Rate Type </label>
+    <select id="inputratetype" name="inputratetype">
+      <option value="interest">nominal interest rate</option>
+      <option value="discount">nominal discount rate</option>
+      <option value="force">force of interest (continuous compound)</option>
+    </select>
+    <label>convertible/compound</label>
+    <input type="text" id="inputcompoundfreq" name="inputcompoundfreq">
+    <label>times per year(leave the box empty if you choose force of interest)</label><br><br>
+    
+    <label for="Rate">Rate=</label>
+    <input type="text" id="Rate" name="Rate">
+    <label for="Rate">%</label>
+    <br><br>
+    
+    <label for="First_Paytime">First payment happens at t=</label>
+    <input type="text" id="First_Paytime" name="First_Paytime">
+    <label for="Year">year</label><br>
+    <label for="First_Paytime">Each payment is</label>
+    <input type="text" id="Paytime_Gap" name="Paytime_Gap">
+    <label for="Year">year after the previous one.</label><br>
+    <label for="Total number of payments">Total number of payments =</label>
+    <input type="text" id="Total" name="Total">
+    <br><br>
+
+    <label>The payments progress as</label>
+    <select id="paymentprogress" name="paymentprogress" onchange="paymentprogressdisplay();">
+      <option value="Empty"> </option>
+      <option value="constant">fixed amount</option>
+      <option value="arithmetic">arithmetic sequence</option>
+      <option value="geometric">geometric sequence</option>
+    </select><br><br>
+    <p id="typeofpayment">  </p><br><br>
+
+    <button id="Compute" onclick="computevalue();">Compute</button>
+    <p id='present_v'> </p>
+    <p id='accumulated_v'> </p>
+</body>
+
+</html>

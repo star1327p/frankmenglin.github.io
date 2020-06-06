@@ -25,8 +25,8 @@ function paymentprogressdisplay(){
 }
 
 function computevalue(){
-    var rate=0.01*document.getElementById("Rate").value;
-    var m_=document.getElementById("inputcompoundfreq").value;
+    var rate=0.01*parseFloat(document.getElementById("Rate").value);
+    var m_=parseFloat(document.getElementById("inputcompoundfreq").value);
     var type_=document.getElementById("inputratetype").value;
     
     if (type_=="discount"){
@@ -35,12 +35,12 @@ function computevalue(){
         m_="inf";
     }
     
-    var i=convertrate(rate,m_,1);
+    var i=convertrate(rate,m_,1.0);
     var v=1.0/(1.0+i);
 
-    var nofp=document.getElementById("Total").value;
-    var first=document.getElementById("First_Paytime").value;
-    var gap=document.getElementById("Paytime_Gap").value;
+    var nofp=parseFloat(document.getElementById("Total").value);
+    var first=parseFloat(document.getElementById("First_Paytime").value);
+    var gap=parseFloat(document.getElementById("Paytime_Gap").value);
 
 
     var paymentprogresstype=document.getElementById("paymentprogress").value;

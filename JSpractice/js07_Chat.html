@@ -1,16 +1,26 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chat with me</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script src="js07_Chat.js"></script>
+</head>
+
 <body>
 <a href="../index.html"> Go back to home page.</a><br>
 <h2>Chat with me!</h2>
 
 
-<p id="demo"></p>
+<p id="conversation"></p>
 <script type="text/javascript">
     var username=window.prompt("How should I call you?");
 </script>
 
-<button type="button" onclick='document.getElementById("demo").innerHTML = username+": Hello Frank!"+"<br>Frank: Sorry this chat bot is still under construction, so this is all I can say now."'>Hello Frank!</button>
-
+<p id="userchoice">
+<button type="button" onclick="greeting(username);">Hello Frank!</button>
+</p>
 </body>
 </html>

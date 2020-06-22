@@ -65,7 +65,7 @@ function play() {
 
 function RandomStart() {
     y = Math.random();
-    if (y > 0.5) { UserDraw(9,-0.1,-0.1); } else { FrankDraw(9,-0.1,-0.1);}
+    if (y > 0.5) { UserDraw(9,-0.1,-0.1,1); } else { FrankDraw(9,-0.1,-0.1,0);}
 }
 
 function UserDraw(n, un, fn, m) {

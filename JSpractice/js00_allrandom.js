@@ -14,7 +14,7 @@ function stdnormalrandom(){
 }//Box Muller to get std normal random variable
 
 function normalrandom(mu,sigma){
-    return Math.sqrt(sigma)*stdnormalrandom()+mu;
+    return sigma*stdnormalrandom()+mu;
 }//normal random variable with given average and std
 
 function binaryrandom(p){
